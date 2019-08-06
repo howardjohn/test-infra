@@ -16,4 +16,8 @@ diff-config:
 check-config:
 	(cd prow/config/cmd; go run generate.go check)
 
+.PHONY: test
+test:
+	GO111MODULE=on go test ./...
+
 include Makefile.common.mk
